@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <script src="main.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <h1>CoinLayer Webpage</h1>
+
+
+<!-- Live Stream of 15 Most Popular Cryptos -->
+    <h2>Live Stream - 15 Most Popular Cryptos</h2>
+    <table id="liveStream">
+        <table id="liveCryptoTable">
+            <thead>
+                <tr>
+                    <th>Crypto</th>
+                    <th>Price (USD)</th>
+                    <th>Change (24h)</th>
+                </tr>
+            </thead>
+            <tbody id="liveCryptoBody">
+                <!-- Crypto data will go here -->
+            </tbody>
+        </table>
+     
+    </table>
+
+
+
+
+    <!-- Crypto Watchlist Table -->
+    <h2>Crypto Watchlist</h2>
+    <table id="watchlist">
+        <thead>
+            <tr>
+                <th>Crypto</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="watchlistBody">
+            <!-- Watchlist content will go here -->
+        </tbody>
+    </table>
+
+    <label for="cryptoInput">Add Crypto: </label>
+    <input type="text" id="cryptoInput">
+    <button onclick="addToWatchlist()">Add to Watchlist</button>
+
+    
+
+    <!-- Historical Value of Crypto Table -->
+    
+    <form id="cryptoForm">
+        <label for="cryptoSymbol">Crypto Symbol:</label>
+        <input type="text" id="cryptoSymbol" required>
+        
+        <label for="date">Date (YYYY-MM-DD):</label>
+        <input type="text" id="date" placeholder="YYYY-MM-DD" required>
+
+        <button type="button" onclick="getCryptoValue()">Get Value</button>
+    </form>
+
+    <table id="cryptoValueTable">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Crypto Symbol</th>
+                <th>Value (USD)</th>
+            </tr>
+        </thead>
+        <tbody id="cryptoValueBody">
+            <!-- Crypto value data will go here -->
+        </tbody>
+    </table>
+
+
+
+
+
+    <!-- Crypto Conversion Table -->
+    <h2>Crypto Conversion</h2>
+    <label for="fromCrypto">From Crypto:</label>
+    <select id="fromCrypto">
+        <!-- Add crypto options dynamically using JavaScript -->
+    </select>
+    <label for="toCrypto">To Crypto:</label>
+    <select id="toCrypto">
+        <!-- Add crypto options dynamically using JavaScript -->
+    </select>
+    <input type="number" id="conversionAmount" placeholder="Enter amount">
+    <button onclick="convertCrypto()">Convert</button>
+    <p id="conversionResult"></p>
+
+
+</body>
+</html>
